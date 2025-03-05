@@ -1,8 +1,9 @@
-import { User } from "@/components";
+import { Header, Respos } from "@/components";
 export default function Home() {
   return (
     <>
-      <User />
+      <Header />
+      <Respos />
     </>
   );
 }

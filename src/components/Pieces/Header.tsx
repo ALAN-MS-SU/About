@@ -1,9 +1,9 @@
 "use server";
-import { GitHubUser } from "@/models";
-import JS from "@/assets/images/JS.png";
+import { GitHubUser } from "@/Models";
+import TS from "@/assets/images/TS.png";
 import CS from "@/assets/images/CS.png";
 import Image from "next/image";
-export async function User() {
+export async function Header() {
   const { USER } = process.env;
   const User: GitHubUser = await fetch(`https://api.github.com/users/${USER}`, {
     method: "GET",
@@ -12,7 +12,6 @@ export async function User() {
       if (res.ok) return res.json();
     })
     .catch((err) => console.error(err));
-
   return (
     <header
       style={{
@@ -32,7 +31,8 @@ export async function User() {
       </div>
       <h1
         style={{
-          backgroundImage: "linear-gradient(90deg,var(--First-Light),var(--Secound-Light))",
+          backgroundImage:
+            "linear-gradient(90deg,var(--First-Light),var(--Secound-Light))",
         }}
         className="p-4 border-solid border-[var(--Text)] rounded-lg text-4xl text-[var(--Text)]"
       >
@@ -41,7 +41,7 @@ export async function User() {
       <div className="flex flex-col items-center justify-center gap-4">
         <h1 className="text-2xl text-[var(--Text)]">My languages</h1>
         <div className="flex flex-row items-center justify-center gap-5">
-          <Image src={JS} alt="JS icon" height={100} width={100} />
+          <Image src={TS} alt="JS icon" height={100} width={100} />
           <Image src={CS} alt="C# icon" height={100} width={100} />
         </div>
       </div>

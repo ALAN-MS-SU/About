@@ -37,3 +37,12 @@ export interface GitHubRepository {
   default_branch: string;
   topics: string[];
 }
+export interface Tag {
+  name: string;
+  commit: {
+    sha: string;
+    url: string;
+  };
+  zipball_url: string;
+  tarball_url: string;
+}
