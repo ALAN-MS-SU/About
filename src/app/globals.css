@@ -8,7 +8,15 @@
   margin: 0;
   border: none;
   text-decoration: none;
+  font-family:sans-serif;
 }
 body{
   font-size: 100%;
+}
+:root{
+  --First: #4f0c8d;
+  --First-Light: #8A0AFF;
+  --Secound: #0c4794;
+  --Secound-Light: #006DFF;
+  --Text: White;
 }

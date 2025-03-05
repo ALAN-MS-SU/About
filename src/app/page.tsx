@@ -1,5 +1,4 @@
-import { User } from "@/components/";
-
+import { User } from "@/components";
 export default function Home() {
   return (
     <>
