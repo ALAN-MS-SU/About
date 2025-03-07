@@ -2,21 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   border: none;
   text-decoration: none;
-  font-family:sans-serif;
+  font-family: sans-serif;
 }
-body{
+body {
   font-size: 100%;
 }
-:root{
+:root {
   --First: #4f0c8d;
-  --First-Light: #8A0AFF;
+  --First-Light: #8a0aff;
   --Secound: #0c4794;
-  --Secound-Light: #006DFF;
+  --Secound-Light: #006dff;
   --Text: White;
+  --Text-Hover: black;
 }

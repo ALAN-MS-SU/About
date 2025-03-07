@@ -1,7 +1,7 @@
 "use server";
 import { GitHubUser } from "@/Models";
-import TS from "@/assets/images/TS.png";
-import CS from "@/assets/images/CS.png";
+import TS from "@/assets/images/Languages/TS.png";
+import CS from "@/assets/images/Languages/CS.png";
 import Image from "next/image";
 export async function Header() {
   const { USER } = process.env;
@@ -41,8 +41,20 @@ export async function Header() {
       <div className="flex flex-col items-center justify-center gap-4">
         <h1 className="text-2xl text-[var(--Text)]">My languages</h1>
         <div className="flex flex-row items-center justify-center gap-5">
-          <Image src={TS} alt="JS icon" height={100} width={100} />
-          <Image src={CS} alt="C# icon" height={100} width={100} />
+          <Image
+            className="max-h-[100px] max-w-[100px]"
+            src={TS}
+            alt="JS icon"
+            height={100}
+            width={100}
+          />
+          <Image
+            className="max-h-[100px] max-w-[100px]"
+            src={CS}
+            alt="C# icon"
+            height={100}
+            width={100}
+          />
         </div>
       </div>
     </header>
