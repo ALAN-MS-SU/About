@@ -40,5 +40,31 @@ body {
 }
 #Repos .swiper-slide {
   display: flex;
-  justify-content: center
+  justify-content: center;
+}
+#Repos .swiper-button-next {
+  transition: all 0.5s ease;
+  margin-right: 60px;
+  padding: 40px;
+  border-radius: 100%;
+  border: solid var(--Text) 3px;
+  color: var(--Text);
+  background-color: transparent;
+}
+#Repos .swiper-button-prev {
+  transition: all 0.5s ease;
+  border-radius: 100%;
+  padding: 40px;
+  background-color: transparent;
+  border: solid var(--Text) 3px;
+  margin-left: 60px;
+  color: var(--Text);
+}
+#Repos .swiper-button-next:hover {
+  background-color: var(--Text);
+  color: var(--Text-Hover);
+}
+#Repos .swiper-button-prev:hover {
+  color: var(--Text-Hover);
+  background-color: var(--Text);
 }

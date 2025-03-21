@@ -3,7 +3,7 @@ import "swiper/swiper-bundle.css";
 import "swiper/css";
 import { App, Site } from "@/Models";
 import { Swiper } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination,Navigation } from "swiper/modules";
 import { AppBox, SiteBox } from "..";
 import { SwiperSlide } from "swiper/react";
 export function Slider({ SlidesJSON }: { SlidesJSON: string }) {
@@ -13,6 +13,7 @@ export function Slider({ SlidesJSON }: { SlidesJSON: string }) {
       <Swiper
         slidesPerView={1}
         spaceBetween={50}
+        navigation
         pagination={{
           clickable: true,
           renderBullet(index, className) {
@@ -21,7 +22,7 @@ export function Slider({ SlidesJSON }: { SlidesJSON: string }) {
         }}
         loop={true}
         className="swiper h-[525px] w-[100dvw]"
-        modules={[Pagination]}
+        modules={[Pagination,Navigation]}
       >
         {Slides.map((Slide, index) => {
           const App: App = Slide as App;
