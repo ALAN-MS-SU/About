@@ -17,7 +17,7 @@ export async function Header() {
       style={{
         backgroundImage: "linear-gradient(90deg,var(--Secound),var(--First))",
       }}
-      className="flex flex-row items-center justify-between w-full gap-5 p-5 border-0 sticky top-0 border-b-2 border-solid border-[var(--Text)]"
+      className=" z-[2] flex flex-row items-center justify-between w-full gap-5 p-5 border-0 sticky top-0 border-b-2 border-solid border-[var(--Text)] h-[250px]"
     >
       <div className="flex flex-col items-center justify-center">
         <Image

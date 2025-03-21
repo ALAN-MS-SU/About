@@ -7,11 +7,11 @@ export class App extends Project {
     this.Release = Release;
   }
   public static async GetBuild(Name: string): Promise<Release> {
+    const { USER } = process.env;
     const Releases: Release = (
-      await fetch(
-        `https://api.github.com/repos/${Project.USER}/${Name}/releases`,
-        { method: "GET" }
-      )
+      await fetch(`https://api.github.com/repos/${USER}/${Name}/releases`, {
+        method: "GET",
+      })
         .then(async (data) => {
           if (data.ok) return await data.json();
         })

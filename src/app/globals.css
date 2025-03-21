@@ -12,6 +12,7 @@
 }
 body {
   font-size: 100%;
+  overflow-x: hidden;
 }
 :root {
   --First: #4f0c8d;
@@ -20,4 +21,24 @@ body {
   --Secound-Light: #006dff;
   --Text: White;
   --Text-Hover: black;
+}
+#Repos div .swiper-pagination-bullet-active {
+  background-color: var(--First-Light);
+  padding: 17px;
+  border-radius: 100%;
+  opacity: 100%;
+  position: relative;
+  top: 12px;
+}
+#Repos .swiper-pagination-bullet {
+  background-color: var(--Secound-Light);
+  padding: 15px;
+  border-radius: 100%;
+  opacity: 100%;
+  position: relative;
+  top: 10px;
+}
+#Repos .swiper-slide {
+  display: flex;
+  justify-content: center
 }

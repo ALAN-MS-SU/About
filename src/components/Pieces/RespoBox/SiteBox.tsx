@@ -1,3 +1,4 @@
+"use client";
 import { Site } from "../../../Models";
 import Image from "next/image";
 import TS from "@/assets/images/Languages/TS.png";
@@ -6,7 +7,7 @@ import { Button, IconButton } from "../../";
 import { BsGithub } from "react-icons/bs";
 import Link from "next/link";
 export function SiteBox({ Site }: { Site: Site }) {
-  const { PUBLIC_ROUTE } = process.env;
+ // const { NEXT_PUBLIC_IMAGES } = process.env;
   return (
     <div
       style={{
@@ -22,7 +23,7 @@ export function SiteBox({ Site }: { Site: Site }) {
         Name: {Site.Repository.name}
       </h3>
       <Image
-        src={`${PUBLIC_ROUTE}/${Site.Repository.name}.png`}
+        src={`${process.env.NEXT_PUBLIC_IMAGES}/${Site.Repository.name}.png`}
         alt="View app"
         width={500}
         height={500}

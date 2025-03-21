@@ -1,3 +1,4 @@
+"use client";
 import { App } from "../../../Models";
 import Image from "next/image";
 import TS from "@/assets/images/Languages/TS.png";
@@ -6,7 +7,6 @@ import { Button, IconButton } from "../..";
 import { BsGithub } from "react-icons/bs";
 import Link from "next/link";
 export function AppBox({ App }: { App: App }) {
-  const { PUBLIC_ROUTE } = process.env;
   return (
     <div
       style={{
@@ -23,7 +23,7 @@ export function AppBox({ App }: { App: App }) {
       </h3>
       <Image
         className=" max-h-[245px]"
-        src={`${PUBLIC_ROUTE}/${App.Repository.name}.png`}
+        src={`${process.env.NEXT_PUBLIC_IMAGES}/${App.Repository.name}.png`}
         alt="View app"
         width={200}
         height={500}

@@ -7,8 +7,9 @@ export class Site extends Project {
     this.Deploy = Deploy;
   }
   public static async GetBuild(Name: string): Promise<string> {
+    const { USER } = process.env;
     const WebSite: WebSite = await fetch(
-      `https://api.github.com/repos/${Project.USER}/${Name}`,
+      `https://api.github.com/repos/${USER}/${Name}`,
       { method: "GET" }
     )
       .then(async (data) => {
