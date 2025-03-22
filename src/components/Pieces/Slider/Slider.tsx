@@ -3,8 +3,8 @@ import "swiper/swiper-bundle.css";
 import "swiper/css";
 import { App, Site } from "@/Models";
 import { Swiper } from "swiper/react";
-import { Pagination,Navigation } from "swiper/modules";
-import { AppBox, SiteBox } from "..";
+import { Pagination, Navigation } from "swiper/modules";
+import { AppBox, SiteBox } from "../..";
 import { SwiperSlide } from "swiper/react";
 export function Slider({ SlidesJSON }: { SlidesJSON: string }) {
   const Slides: (App | Site)[] = JSON.parse(SlidesJSON);
@@ -21,8 +21,8 @@ export function Slider({ SlidesJSON }: { SlidesJSON: string }) {
           },
         }}
         loop={true}
-        className="swiper h-[525px] w-[100dvw]"
-        modules={[Pagination,Navigation]}
+        className="swiper h-[600px] w-[100dvw]"
+        modules={[Pagination, Navigation]}
       >
         {Slides.map((Slide, index) => {
           const App: App = Slide as App;
