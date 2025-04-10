@@ -9,7 +9,13 @@ export abstract class Project {
   public static async GetTag(Name: string): Promise<Tag> {
     const { USER } = process.env;
     const Tags: Tag[] = await fetch(
-      `https://api.github.com/repos/${USER}/${Name}/tags`
+      `https://api.github.com/repos/${USER}/${Name}/tags`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: process.env.GIT_TOKEN as string,
+        },
+      }
     )
       .then(async (data) => {
         if (data.ok) return await data.json();
@@ -25,6 +31,9 @@ export abstract class Project {
       `https://api.github.com/users/${USER}/repos`,
       {
         method: "GET",
+        headers: {
+          Authorization: process.env.GIT_TOKEN as string,
+        },
       }
     )
       .then(async (data) => {

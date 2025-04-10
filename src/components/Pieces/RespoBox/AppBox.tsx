@@ -13,7 +13,7 @@ export function AppBox({ App }: { App: App }) {
         backgroundImage:
           "linear-gradient(90deg,var(--Secound-Light),var(--First-Light))",
       }}
-      className=" flex flex-col justify-between items-center p-4 w-[600px] h-[475px] border-solid border-[var(--Text)] border-2 rounded-lg"
+      className=" flex flex-col justify-between items-center p-4 w-[600px] h-[550px] border-solid border-[var(--Text)] border-2 rounded-lg"
     >
       <h2 className="text-lg text-[var(--Text)] text-center w-full border-0 border-b-2 border-solid">
         App Mobile
@@ -22,11 +22,11 @@ export function AppBox({ App }: { App: App }) {
         Name: {App.Repository.name}
       </h3>
       <Image
-        className=" max-h-[245px]"
-        src={`${process.env.NEXT_PUBLIC_IMAGES}/${App.Repository.name}.png`}
-        alt="View app"
-        width={200}
-        height={500}
+        className=" max-h-[275px] border-solid border-[var(--Text)] border-6 rounded-lg"
+        src={`${process.env.NEXT_PUBLIC_IMAGES}/${App.Repository.name}${process.env.NEXT_PUBLIC_DEFAULT_ETS}`}
+        alt="App Icon"
+        width={275}
+        height={275}
       />
       <p className="text-md text-[var(--Text)] text-center h-[100px] w-full">
         Description: {App.Repository.description}

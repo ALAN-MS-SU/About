@@ -14,7 +14,7 @@ export function SiteBox({ Site }: { Site: Site }) {
         backgroundImage:
           "linear-gradient(90deg,var(--Secound-Light),var(--First-Light))",
       }}
-      className=" flex flex-col justify-between items-center p-4 w-[600px] h-[475px] border-solid border-[var(--Text)] border-2 rounded-lg"
+      className=" flex flex-col justify-between items-center p-4 w-[600px] h-[550px] border-solid border-[var(--Text)] border-2 rounded-lg"
     >
       <h2 className="text-lg text-[var(--Text)] w-full text-center border-0 border-b-2 border-solid">
         WebSite
@@ -23,10 +23,11 @@ export function SiteBox({ Site }: { Site: Site }) {
         Name: {Site.Repository.name}
       </h3>
       <Image
-        src={`${process.env.NEXT_PUBLIC_IMAGES}/${Site.Repository.name}.png`}
-        alt="View app"
-        width={500}
-        height={500}
+        className=" max-h-[275px] border-solid border-[var(--Text)] border-6 rounded-lg"
+        src={`${process.env.NEXT_PUBLIC_IMAGES}/${Site.Repository.name}${process.env.NEXT_PUBLIC_DEFAULT_ETS}`}
+        alt="Site icon"
+        width={275}
+        height={275}
       />
       <p className="text-md text-[var(--Text)] text-center h-[120px]">
         Description: {Site.Repository.description}

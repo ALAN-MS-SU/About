@@ -10,7 +10,12 @@ export class Site extends Project {
     const { USER } = process.env;
     const WebSite: WebSite = await fetch(
       `https://api.github.com/repos/${USER}/${Name}`,
-      { method: "GET" }
+      {
+        method: "GET",
+        headers: {
+          Authorization: process.env.GIT_TOKEN as string,
+        },
+      }
     )
       .then(async (data) => {
         if (data.ok) return await data.json();

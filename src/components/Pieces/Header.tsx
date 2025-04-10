@@ -7,6 +7,9 @@ export async function Header() {
   const { USER } = process.env;
   const User: GitHubUser = await fetch(`https://api.github.com/users/${USER}`, {
     method: "GET",
+    headers: {
+      Authorization: process.env.GIT_TOKEN as string,
+    },
   })
     .then((res) => {
       if (res.ok) return res.json();
@@ -17,7 +20,7 @@ export async function Header() {
       style={{
         backgroundImage: "linear-gradient(90deg,var(--Secound),var(--First))",
       }}
-      className=" z-[2] flex flex-row items-center justify-between w-full gap-5 p-5 border-0 sticky top-0 border-b-2 border-solid border-[var(--Text)] h-[250px]"
+      className=" z-[2] flex flex-row items-center justify-between w-full gap-5 p-5 border-0 sticky top-0 border-b-2 border-solid border-[var(--Text)] h-[200px]"
     >
       <div className="flex flex-col items-center justify-center">
         <Image

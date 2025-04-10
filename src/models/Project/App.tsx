@@ -11,6 +11,9 @@ export class App extends Project {
     const Releases: Release = (
       await fetch(`https://api.github.com/repos/${USER}/${Name}/releases`, {
         method: "GET",
+        headers: {
+          Authorization: process.env.GIT_TOKEN as string,
+        },
       })
         .then(async (data) => {
           if (data.ok) return await data.json();
